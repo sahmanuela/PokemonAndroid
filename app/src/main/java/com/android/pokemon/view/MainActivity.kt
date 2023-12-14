@@ -24,6 +24,9 @@ class MainActivity : AppCompatActivity() {
         )
         val pokemons = listOf(charmander, charmander, charmander, charmander, charmander)
 
+//        val pokemonsApi = PokemonRepository.listPokemons()
+//        Log.d("POKEMON_API", pokemonsApi.toString())
+
         recyclerView.layoutManager = layoutManager
         recyclerView.adapter = PokemonAdapter(pokemons)
     }

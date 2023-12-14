@@ -46,7 +46,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ivPokemon"
-            tools:text="Nº 001" />
+            tools:text="Nº 001"
+            />
 
 <!--        Name of Pokemóns-->
         <TextView
