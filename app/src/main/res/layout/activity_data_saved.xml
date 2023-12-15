@@ -4,26 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.MainActivity">
-
-    <!--    Recycler View: Pokemón's List-->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvPokemons"
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginLeft="1dp"
-        android:layout_marginTop="310dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginRight="1dp"
-        android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.095"
-        tools:listitem="@layout/pokemon_item" />
+    tools:context=".view.MainActivity"
+    android:background="#FFE0E0">
 
     <!--    Header-->
     <androidx.appcompat.widget.Toolbar
@@ -53,58 +35,76 @@
 
     <!--    Presentation card-->
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="match_parent"
-        android:layout_height="180dp"
+        android:layout_height="430dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/rvPokemons"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbarLogin"
-        app:layout_constraintVertical_bias="0.125">
+        app:layout_constraintVertical_bias="0.0">
 
         <RelativeLayout
+            android:id="@+id/signUpCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <!-- ImageView inside CardView -->
             <ImageView
                 android:id="@+id/imageView2"
-                android:background="@drawable/dispositmoveis"
-                android:layout_width="200dp"
-                android:layout_height="100dp"
+                android:layout_width="250dp"
+                android:layout_height="400dp"
+                android:layout_centerHorizontal="true"
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
-                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/ash"
                 android:contentDescription="@string/pokemon_image"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"/>
-
-            <!-- Button below the ImageView -->
-            <Button
-                android:id="@+id/presentationButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/imageView2"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="16dp"
-                android:text="@string/developer_samantha"
-                android:textColorHighlight="#471515"
-                android:textColorLink="#C83333"
-                app:backgroundTint="#EC1C24"
-                android:onClick="onPresentationButtonClick"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
 
         </RelativeLayout>
+
     </androidx.cardview.widget.CardView>
 
+    <Button
+        android:id="@+id/returnDataSaved"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/checkPokemons"
+        android:textColorHighlight="#471515"
+        android:textColorLink="#C83333"
+        app:backgroundTint="#D23F59"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.429" />
 
+    <TextView
+        android:id="@+id/dataSaved"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="18dp"
+        android:text="@string/your_data_has_been_stored"
+        android:textColor="#D13F59"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/returnDataSaved"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView" />
 </androidx.constraintlayout.widget.ConstraintLayout>

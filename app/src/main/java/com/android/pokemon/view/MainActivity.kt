@@ -1,12 +1,16 @@
 package com.android.pokemon.view
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.android.pokemon.R
 import com.android.pokemon.domain.Pokemon
 import com.android.pokemon.domain.PokemonType
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,5 +33,14 @@ class MainActivity : AppCompatActivity() {
 
         recyclerView.layoutManager = layoutManager
         recyclerView.adapter = PokemonAdapter(pokemons)
+
+        val presentationButton = findViewById<Button>(R.id.presentationButton)
+
+        // Button: Redirect to profile page
+        presentationButton.setOnClickListener {
+            Log.d("MainActivity", "Botão clicado")
+            val i = Intent(this, PerfilActivity::class.java)
+            startActivity(i)
+        }
     }
 }
