@@ -2,6 +2,7 @@ package com.android.pokemon.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
@@ -31,7 +32,9 @@ public class PerfilActivity  extends AppCompatActivity {
         // Button: Redirect to profile page
         returnButtonSignUp.setOnClickListener( (v -> {
             Log.d("PerfilActivity", "Botão Return clicado");
-
+            Intent intent = new Intent(PerfilActivity.this, MainActivity.class);
+            startActivity(intent);
+            finish();
         }));
 
         // Button: Save Data
