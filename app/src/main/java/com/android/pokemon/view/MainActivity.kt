@@ -24,9 +24,15 @@ class MainActivity : AppCompatActivity() {
             "https://img.mypcards.com/img/2/1352/pokemon_viv_023/pokemon_viv_023_pt.jpg",
             1,
             "Charmander",
-            listOf(PokemonType("Fire"))
+            listOf(PokemonType("Firexx"))
         )
-        val pokemons = listOf(charmander, charmander, charmander, charmander, charmander)
+        val pikachu = Pokemon(
+            "https://img.mypcards.com/img/2/1352/pokemon_viv_023/pokemon_viv_023_pt.jpg",
+            1,
+            "Pikachu",
+            listOf(PokemonType("Teste"))
+        )
+        val pokemons = listOf(charmander, pikachu, charmander, charmander, charmander)
 
 //        val pokemonsApi = PokemonRepository.listPokemons()
 //        Log.d("POKEMON_API", pokemonsApi.toString())
@@ -36,6 +42,14 @@ class MainActivity : AppCompatActivity() {
 
         val presentationButton = findViewById<Button>(R.id.presentationButton)
 
+        val preferences = getSharedPreferences(Constantes.PREFERENCES, 0)
+        val retrievedNome = preferences.getString("nome", "")
+
+        if (retrievedNome.isNullOrEmpty()) {
+            presentationButton.text = "Cadastrar Usuário";
+        } else {
+            presentationButton.text = "Hello $retrievedNome"
+        }
         // Button: Redirect to profile page
         presentationButton.setOnClickListener {
             Log.d("MainActivity", "Botão clicado")

@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFE0E0"
     tools:context=".view.MainActivity">
 
     <!--    Header-->
@@ -37,7 +36,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
+        android:layout_height="250dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="15dp"
@@ -56,21 +55,39 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <!-- ImageView inside CardView -->
+            <ImageView
+                android:id="@+id/ashPokebola"
+                android:background="@drawable/pokebola"
+                android:layout_width="200dp"
+                android:layout_height="250dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="60dp"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/pokemon_image"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
             <!--             Register -->
             <TextView
                 android:id="@+id/signup"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="50dp"
                 android:layout_gravity="center"
                 android:layout_marginStart="118dp"
                 android:layout_marginLeft="100dp"
+                android:layout_marginTop="5dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginRight="8dp"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center"
                 android:text="@string/registrar"
                 android:textColor="@color/toolbarMain"
-                android:textSize="40sp"
+                android:textSize="35sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -87,7 +104,7 @@
         android:text="@string/returnPage"
         android:textColorHighlight="#471515"
         android:textColorLink="#C83333"
-        app:backgroundTint="#004482"
+        app:backgroundTint="#DC2912"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.937"
@@ -107,10 +124,10 @@
         android:textColorHint="@color/toolbarMain"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.585"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.344"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.09"
         tools:targetApi="lollipop" />
 
     <EditText
@@ -125,38 +142,54 @@
         android:textColorHint="@color/toolbarMain"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.585"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/registerName"
-        app:layout_constraintVertical_bias="0.056"
+        app:layout_constraintVertical_bias="0.089"
         tools:targetApi="lollipop" />
 
     <Button
         android:id="@+id/buttonRegister"
-        android:layout_width="130dp"
-        android:layout_height="54dp"
-        android:layout_marginTop="20dp"
-        android:backgroundTint="@color/toolbarMain"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="23dp"
+        android:backgroundTint="#DC2912"
+        android:elevation="10dp"
         android:text="@string/buttonRegister"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.836"
+        app:layout_constraintHorizontal_bias="0.813"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.538"
+        app:layout_constraintTop_toBottomOf="@+id/registerEmail"
+        app:layout_constraintVertical_bias="0.043"
         tools:targetApi="lollipop" />
 
     <TextView
         android:id="@+id/storedValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="296dp"
+        android:layout_marginTop="164dp"
         android:text="@string/storedValor"
         android:textColor="#D13F59"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.262"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+    <Button
+        android:id="@+id/buttonDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:text="Delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/returnButtonSignUp"
+        app:layout_constraintHorizontal_bias="0.873"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/registerEmail"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

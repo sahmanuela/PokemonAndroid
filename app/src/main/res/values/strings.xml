@@ -3,7 +3,7 @@
     <string name="pokemon_image">Pokemon Image</string>
     <string name="dispositivos_moveis">Dispositivos Moveis</string>
     <string name="developer_samantha">Developer: Samantha</string>
-    <string name="returnPage">Return</string>
+    <string name="returnPage">Back</string>
     <string name="checkPokemons">Check All Pokemons</string>
     <string name="login">Login</string>
     <string name="nome">Nome</string>
@@ -14,5 +14,5 @@
     <string name="senha">Password</string>
     <string name="logIn">Login</string>
     <string name="your_data_has_been_stored">Your data has been stored!</string>
-    <string name="storedValor">Hello!</string>
+    <string name="storedValor">" "</string>
 </resources>
