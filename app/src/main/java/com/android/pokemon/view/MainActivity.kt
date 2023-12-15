@@ -21,22 +21,71 @@ class MainActivity : AppCompatActivity() {
         val layoutManager = LinearLayoutManager(this)
 
         val charmander = Pokemon(
-            "https://img.mypcards.com/img/2/1352/pokemon_viv_023/pokemon_viv_023_pt.jpg",
+            "https://img.pokemondb.net/artwork/charmander.jpg",
             1,
             "Charmander",
-            listOf(PokemonType("Firexx"))
+            listOf(PokemonType("Fire"))
+        )
+        val togepi = Pokemon(
+            "https://assets.pokemon.com/assets/cms2/img/pokedex/full/175.png",
+            2,
+            "Togepi",
+            listOf(PokemonType("Fairy"), PokemonType("Flying"))
+        )
+        val squirtle = Pokemon(
+            "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png",
+            3,
+            "Squirtle",
+            listOf(PokemonType("Water"))
+        )
+        val eevee = Pokemon(
+            "https://assets.pokemon.com/assets/cms2/img/pokedex/full/133.png",
+            4,
+            "Eevee",
+            listOf(PokemonType("Normal"))
+        )
+        val vulpix = Pokemon(
+            "https://assets.pokemon.com/assets/cms2/img/pokedex/full/037.png",
+            5,
+            "Vulpix",
+            listOf(PokemonType("Fire"), PokemonType("Ice"))
+        )
+        val jigglypuff = Pokemon(
+            "https://assets.pokemon.com/assets/cms2/img/pokedex/full/039.png",
+            6,
+            "Jigglypuff",
+            listOf(PokemonType("Fairy"))
+        )
+        val snorlax = Pokemon(
+            "https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png",
+            7,
+            "Snorlax",
+            listOf(PokemonType("Normal"), PokemonType("Fighting"))
+        )
+        val meowth = Pokemon(
+            "https://assets.pokemon.com/assets/cms2/img/pokedex/full/052.png",
+            8,
+            "Meowth",
+            listOf(PokemonType("Normal"))
         )
         val pikachu = Pokemon(
-            "https://img.mypcards.com/img/2/1352/pokemon_viv_023/pokemon_viv_023_pt.jpg",
-            1,
+            "https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png",
+            9,
             "Pikachu",
-            listOf(PokemonType("Teste"))
+            listOf(PokemonType("Electric"))
         )
-        val pokemons = listOf(charmander, pikachu, charmander, charmander, charmander)
+        val mareep = Pokemon(
+            "https://assets.pokemon.com/assets/cms2/img/pokedex/full/179.png",
+            3,
+            "Mareep",
+            listOf(PokemonType("Electric"))
+        )
+        val pokemons = listOf(charmander, togepi, squirtle, eevee, vulpix, jigglypuff, snorlax, meowth, pikachu, mareep)
 
 //        val pokemonsApi = PokemonRepository.listPokemons()
 //        Log.d("POKEMON_API", pokemonsApi.toString())
 
+        //Funcionalidade botões
         recyclerView.layoutManager = layoutManager
         recyclerView.adapter = PokemonAdapter(pokemons)
 

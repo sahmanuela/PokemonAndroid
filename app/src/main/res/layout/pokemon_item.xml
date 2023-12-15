@@ -24,7 +24,6 @@
 <!--        Image of Pokémon-->
         <ImageView
             android:id="@+id/ivPokemon"
-            android:background="@drawable/charmander"
             android:layout_width="250dp"
             android:layout_height="250dp"
             android:layout_marginStart="8dp"
