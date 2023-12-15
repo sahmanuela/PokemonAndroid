@@ -42,10 +42,10 @@ class PokemonAdapter(
                 "Water" to "#2196F3",
                 "Ground" to "#795548",
                 "Fairy" to "#fdb9e9",
-                "Normal" to "#212121",
+                "Normal" to "#d3d3d3",
                 "Electric" to "#FFC107",
                 "Flying" to "#40C4FF",
-                "Ice" to "#B2EBF2",
+                "Ice" to "#add8e6",
                 "Fighting" to "#FF6D00"
             )
 
